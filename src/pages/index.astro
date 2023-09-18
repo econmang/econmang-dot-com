@@ -1,0 +1,42 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { Image } from 'astro:assets';
+import gopher from '../assets/gopher.png';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+
+			<div class="mx-auto">
+				<Image 
+					src={gopher}
+					alt="Gopher"
+					width={200}
+					height={200} 
+					class="mx-auto"
+				/>
+			</div>
+
+			<div>
+				<h1 class="text-4xl font-bold text-center my-8">Welcome to Econmang's Blog</h1>
+			</div>
+
+			<div class="my-18">
+				<p>
+					Hi, I'm Econmang. I'm a software engineer and I like to write about things I learn.
+				</p>
+				<p>
+					I'm currently working on a Twitter Clone called <a href="/chirp">chirp</a> and a <a href="/blog">blog</a> using Astro.
+				</p>
+			</div>
+		</main>
+	</body>
+</html>
